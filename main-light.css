@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=ABeeZee:400italic);
+
+
+html {
+    background-color: #FEFEFE;
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+}
+
+body {
+    margin: auto;
+    padding: 0 !important;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.header-bar-link {
+    text-transform: uppercase;
+    color: #555555;
+}
+
+.page-container {
+    
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.title-text {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.header-bar-link {
+    height: 70px;
+    line-height: 20px;
+    padding: 27px;
+}
+
+.header-bar-divider {
+    display: inline-block;
+    position: relative;
+    width: 1px;
+    height: 12px;
+    background-color: #555555;
+}
+
+#header-bar {
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(254, 254, 254, .90);
+    text-align: center;
+}
+
+
+#links-container {
+    display: table;
+    margin: auto;
+    margin-top: 30px;
+    width: 80%;
+}
+
+#splash-container {
+    margin: auto;
+    margin-top: 260px;
+    padding-bottom: 240px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+#splash-pre-name {
+    font-size: 20px;
+    color: #777777;
+    letter-spacing: 5px;
+}
+
+#splash-name {
+    font-size: 80px;
+    color: #222222;
+    position: relative;
+}
+
+#splash-post-name {
+    font-size: 20px;
+    color: #555555;
+    position: relative;
+    letter-spacing: 5px;
+}
+
+#splash-divider {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    height: 1px; /* Line width on splash */
+    width: 300px;
+    background-color: #555555;
+}
+
+#splash-image {
+    width: 1000px;
+}
+
+#section-wrapper {
+    padding-top: 30px;
+    background-color: #EEEEF0;
+}
+
+.section {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1000px;
+    background-color: #FEFEFE;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-image-full { width: 100%; }
+
+.section-title-text {
+    font-weight: 700;
+    font-size: 36px;
+    padding: 40px;
+    width: calc(100% - 80px);
+}
+
+.column-title-text {
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin-left: 80px;
+    padding-left: 20px;
+    margin-right: 80px;
+    margin-top: 20px;
+    width: calc(100% - 180px);
+}
+
+.subject-title-text {
+    font-weight: 700;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+    width: calc(100% - 160px);
+}
+
+.uppercase { text-transform: uppercase; }
+.no-top-margin { padding-top: 0 !important; }
+
+#university-of-oregon-link {
+    border: 2px solid #134722;
+    color: #134722;
+    float: right;
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+#university-of-oregon-link:hover {
+    background-color: #134722;
+    color: #FEFEFE;
+    text-decoration: none;
+}
+
+.section-divider-full {
+    width: 100%;
+    height: 1px;
+    background-color: #E0E0E0;
+}
+
+.section-divider-short {
+    width: 40%;
+    height: 1px;
+    background-color: #E0E0E0;
+    margin: auto;
+}
+
+p {
+    margin: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+    letter-spacing: .2px;
+    font-size: 18px;
+}
+
+/* === ITEM CARDS ===
+
+.item-card-wrapper {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.item-card-small {
+    height: 140px;
+    width: 22%;
+    background-color: blue;
+    display: inline-block;
+    margin: 2%;
+}
+*/
+
+/* === COLUMN WORK ===
+.two-column-wrapper {
+    text-transform: none;
+    text-align: center;
+}
+
+.right-column, .left-column {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: inline-block;
+    width: 44%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 26px;
+}
+*/
+
+#course-details {
+    border-left: 1px dotted #134722;
+    border-right: 1px dotted #134722;
+    padding-bottom: 1px;
+}
+
+#class-quote {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'ABeeZee', sans-serif;
+    margin-bottom: 20px;
+    color: #AAA;
+}
+
+.quotes {
+    height: 16px;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.class-button-wrapper {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.class-button, .class-button-selected {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 6px;
+    margin: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.class-button {
+    border: 1px solid #BBB;
+    color: #666;
+}
+
+.class-button-selected {
+    border: 1px solid #134722;
+    background-color: #134722;
+    color: #FEFEFE;
+}
+
+.class-button-selected:hover { text-decoration: none; }
+
+.class-button:hover {
+    background-color: rgba(19, 71, 34, .1);
+    color: #134722;
+    border-color: #134722;
+    text-decoration: none;
+}
+
+.class-button:active {
+    border: 1px solid #134722;
+    background-color: #134722;
+    color: #FEFEFE;
+}
+
