@@ -26,7 +26,7 @@
     </div>
 </div>
 <div class="window-bar" id="section-wrapper">
-<div class="section" id="education-section-wrapper" style="height: 2000px">
+<div class="section" id="education-section-wrapper">
     <img class="unselectable section-image-full" id="education-first-image" src="img/lilis-front.gif">
     
     <!-- --> <div class="section-divider-full"></div> <!-- -->
@@ -34,7 +34,7 @@
     
     <div class="section-title-text">
         <span>University of Oregon</span>
-        <a id="university-of-oregon-link" href="https://uoregon.edu/" target="_blank">Website</a>
+        <a class="uncolored-link" id="university-of-oregon-link" href="https://uoregon.edu/" target="_blank">Website</a>
     </div>
     <div class="section-divider-full"></div>
     <p>I began attending the University of Oregon during Fall of 2012.</p>
@@ -43,9 +43,9 @@
     <!-- COURSE QUOTES -->
     
     <div class="column-title-text no-top-margin" id="course-details">
-        <span class="uppercase">Honorable mentions:</span>
+        <span class="uppercase">Some of the courses I took:</span>
         <div class="class-button-wrapper">
-            <a class="class-button-selected" id="class-button-1" onmouseup="switchQuoteFor(this, 1)">Vikings/Iceland Sagas</a>
+            <a class="class-button-selected" id="class-button-1" onmouseup="switchQuoteFor(this, 1)">Vikings/Iceland Sagas</a> <!-- Onload course selected -->
             <a class="class-button" id="class-button-2" onmouseup="switchQuoteFor(this, 2)">History of Motion Picture</a>
             <a class="class-button" id="class-button-3" onmouseup="switchQuoteFor(this, 3)">Human Nature</a>
             <a class="class-button" id="class-button-4" onmouseup="switchQuoteFor(this, 4)">Intro to Business</a>
@@ -60,12 +60,26 @@
     
     <!-- END QUOTES -->
     
-    <p class="indent">I was looking to diversify my knowledge before leaving college and took courses in a variety of subjects. Obviously I found some subject that just weren't for me, but I also found some I wanted to pursue further.</p>
-    <p>I am currently pursuing minors in both Economics and Mathmatics.</p>
+    <p class="indent">Obviously I found some subject that just weren't for me, but I also found some that I wanted to learn more about.</p>
+    <p>I am pursuing minors in <a class="minor-button uncolored-link" id="mathmatics-minor-button" href="http://math.uoregon.edu/" target="_blank">Mathmatics</a> and <a class="minor-button uncolored-link" id="economics-minor-button" href="http://economics.uoregon.edu/" target="_blank">Economics</a>.</p>
+    <p>I plan to graduate J<span style="text-decoration:underline">une 2016</span> with a B.S. in <a class="minor-button uncolored-link" id="cs-major-button" href="http://www.cs.uoregon.edu/" target="_blank">Computer and Information Science</a>.</p>
+</div>
+
+
+</div>
+<div class="window-bar" id="project-wrapper">
+    <div id="project-section-title-float">Projects/</div>
     
-    <!-- MINOR INFORMATION -->
-    
-</div>    
+    <div class="item-card-wrapper">
+        <div class="item-card-project">
+            <div class="">Project One</div>
+            <div class="section-divider-medium-green"></div>
+        </div>
+        <div class="item-card-project">
+            Project Two
+            <div class="section-divider-medium"></div>
+        </div>
+    </div>
 </div>
 </div>
 </body>

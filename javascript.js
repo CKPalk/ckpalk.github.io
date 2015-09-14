@@ -4,7 +4,7 @@ var courseQuotes = [
     "An in depth analysis of film history such as the American counterculture film 'Easy Rider' by Dennis Hopper, the Germany cinemas rebutal to Nazi and Heimatfilme cinema, and how Bollywood films reflect the culture of India. Truely eye opening.", 
     "This is a quote for Human Nature", 
     "This is a quote for Intro to Business", 
-    "This is a quote for Calculus I / II / III", 
+    "I thought maybe it would get better in Calculus II, then I made the same mistake when deciding to take Calculus III.", 
     "This is a quote for Linear Algebra"
 ];
 

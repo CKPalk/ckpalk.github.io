@@ -19,7 +19,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a.header-bar-link:hover {
     text-decoration: underline;
 }
 
@@ -124,6 +124,7 @@ a.header-bar-link {
 
 #section-wrapper {
     padding-top: 30px;
+    padding-bottom: 70px;
     background-color: #EEEEF0;
 }
 
@@ -131,6 +132,7 @@ a.header-bar-link {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 80px;
     width: 95%;
     max-width: 1000px;
     background-color: #FEFEFE;
@@ -175,8 +177,6 @@ a.header-bar-link {
 .no-top-margin { padding-top: 0 !important; }
 
 #university-of-oregon-link {
-    border: 2px solid #134722;
-    color: #134722;
     float: right;
     margin-top: 12px;
     text-transform: uppercase;
@@ -188,16 +188,17 @@ a.header-bar-link {
     padding-right: 18px;
 }
 
-#university-of-oregon-link:hover {
-    background-color: #134722;
-    color: #FEFEFE;
-    text-decoration: none;
+.section-divider-full, .section-divider-full-dark {
+    width: 100%;
+    height: 1px;
 }
 
 .section-divider-full {
-    width: 100%;
-    height: 1px;
     background-color: #E0E0E0;
+}
+
+.section-divider-full-dark {
+    background-color: #444444;
 }
 
 .section-divider-short {
@@ -205,6 +206,20 @@ a.header-bar-link {
     height: 1px;
     background-color: #E0E0E0;
     margin: auto;
+}
+
+.section-divider-medium, .section-divider-medium-green {
+    width: 75%;
+    height: 1px;
+    margin: auto;
+}
+
+.section-divider-medium {
+    background-color: #E0E0E0;
+}
+
+.section-divider-medium-green {
+    background-color: #6FDF11;
 }
 
 p {
@@ -215,7 +230,7 @@ p {
     font-size: 18px;
 }
 
-/* === ITEM CARDS ===
+/* === ITEM CARDS === */
 
 .item-card-wrapper {
     width: 90%;
@@ -231,20 +246,35 @@ p {
     display: inline-block;
     margin: 2%;
 }
-*/
 
-/* === COLUMN WORK ===
+.light-green-text {
+    color: #6FDF11;
+}
+
+.item-card-project {
+    display: inline-block;
+    width: 40%;
+    height: 360px;
+    margin-top: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    border: 1px solid #888888;
+    
+}
+
+/* === COLUMN WORK === */
 .two-column-wrapper {
     text-transform: none;
     text-align: center;
 }
 
-.right-column, .left-column {
+.left-column, .right-column {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
     display: inline-block;
-    width: 44%;
+    width: 30%;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
@@ -252,7 +282,10 @@ p {
     text-align: left;
     line-height: 26px;
 }
-*/
+
+.inner-column-textbox {
+    
+}
 
 #course-details {
     border-left: 1px dotted #134722;
@@ -320,5 +353,52 @@ p {
     border: 1px solid #134722;
     background-color: #134722;
     color: #FEFEFE;
+}
+
+#economics-minor-button, #mathmatics-minor-button, #cs-major-button {
+    display: inline-block;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 700;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.uncolored-link {
+    border: 2px solid #134722;
+    color: #134722;
+}
+
+.uncolored-link:hover {
+    background-color: #134722;
+    color: #FEFEFE;
+    text-decoration: none;
+}
+
+#project-section-wrapper {
+    position: relative;
+}
+
+#project-section-title-float {
+    position: absolute;
+    top: 220px;
+    left: 10%;
+    color: #6FDF11;
+    font-size: 50px;
+}
+
+#project-wrapper {
+    border-top: 1px solid #DDD;
+    position: relative;
+}
+
+#project-first-image {
+    z-index: -1;
+    position: absolute;
+    top: 60px;
+    left: 0;
 }
 
