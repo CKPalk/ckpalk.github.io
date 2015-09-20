@@ -4,7 +4,7 @@
 
 
 html {
-    background-color: #FEFEFE;
+    background-color: #F4F4F4;
     font-family: 'Montserrat', sans-serif;
     color: #555555;
 }
@@ -26,10 +26,6 @@ a.header-bar-link:hover {
 a.header-bar-link {
     text-transform: uppercase;
     color: #555555;
-}
-
-.page-container {
-    
 }
 
 .unselectable {
@@ -66,7 +62,7 @@ a.header-bar-link {
     top: 0px;
     width: 100%;
     height: 70px;
-    background-color: rgba(254, 254, 254, .90);
+    background-color: rgba(244, 244, 244, .92);
     text-align: center;
 }
 
@@ -85,7 +81,6 @@ a.header-bar-link {
     text-align: center;
     position: relative;
     width: 100%;
-    border-bottom: 1px solid #E0E0E0;
 }
 
 #splash-pre-name {
@@ -125,7 +120,6 @@ a.header-bar-link {
 #section-wrapper {
     padding-top: 30px;
     padding-bottom: 70px;
-    background-color: #EEEEF0;
 }
 
 .section {
@@ -176,9 +170,10 @@ a.header-bar-link {
 .uppercase { text-transform: uppercase; }
 .no-top-margin { padding-top: 0 !important; }
 
-#university-of-oregon-link {
-    float: right;
-    margin-top: 12px;
+#university-of-oregon-link { float: right; }
+#university-of-oregon-link, #my-projects-link {
+    
+    margin-top: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-sizing: border-box;
@@ -186,6 +181,11 @@ a.header-bar-link {
     line-height: 28px;
     padding-left: 18px;
     padding-right: 18px;
+}
+
+#my-projects-link {
+    display: inline-block;
+    margin-top: 40px;
 }
 
 .section-divider-full, .section-divider-full-dark {
@@ -202,9 +202,9 @@ a.header-bar-link {
 }
 
 .section-divider-short {
-    width: 40%;
+    width: 10%;
     height: 1px;
-    background-color: #E0E0E0;
+    background-color: #444444;
     margin: auto;
 }
 
@@ -233,10 +233,10 @@ p {
 /* === ITEM CARDS === */
 
 .item-card-wrapper {
-    width: 90%;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
-    margin-top: 30px;
 }
 
 .item-card-small {
@@ -254,13 +254,13 @@ p {
 .item-card-project {
     display: inline-block;
     width: 40%;
-    height: 360px;
-    margin-top: 20px;
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-bottom: 20px;
-    border: 1px solid #888888;
-    
+    min-width: 240px;
+    max-height: 240px;
+    border: 1px solid #E0E0E0;
+    background-color: #FEFEFE;
+    margin: 20px;
+    text-align: center;
+    overflow: hidden;
 }
 
 /* === COLUMN WORK === */
@@ -378,8 +378,10 @@ p {
     text-decoration: none;
 }
 
-#project-section-wrapper {
-    position: relative;
+#projects-title-text {
+    color: #222222;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 #project-section-title-float {
@@ -390,9 +392,15 @@ p {
     font-size: 50px;
 }
 
-#project-wrapper {
-    border-top: 1px solid #DDD;
-    position: relative;
+#project-section-wrapper {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#resume-section-wrapper {
+    
 }
 
 #project-first-image {
@@ -402,3 +410,21 @@ p {
     left: 0;
 }
 
+#cognitopia-splash-image {
+    margin: 10px auto;
+    height: calc(100% - 20px);
+}
+
+.project-tile-img {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+#resume-iframe {
+    width: 80%;
+    height: 9.4in;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
