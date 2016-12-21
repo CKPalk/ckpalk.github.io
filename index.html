@@ -1,94 +1,11 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Cameron Palk</title>
-    <link rel="stylesheet" type="text/css" href="main-light.css">
-    <script type="text/javascript" src="javascript.js"></script>
-</head>
-<body>
-<div class="window-bar" id="header-bar">
-    <div id="links-container">
-        <a class="header-bar-link" href="#">Education</a>
-        <span class="header-bar-divider"></span>
-        <a class="header-bar-link" href="#">Projects</a>
-        <span class="header-bar-divider"></span>
-        <a class="header-bar-link" href="#">Resume</a>
-        <span class="header-bar-divider"></span>
-        <a class="header-bar-link" href="#">Contact Me</a>
-    </div>
-</div>
-<div class="window-bar" id="splash-container">
-    <div class="unselectable" id="splash-image-container">
-        <div class="title-text" id="splash-pre-name">The online portfolio of</div>
-        <div class="title-text" id="splash-name">Cameron Palk</div>
-        <div id="splash-divider"></div>
-        <div class="title-text" id="splash-post-name">Student / Programmer</div>
-    </div>
-</div>
-<div class="window-bar" id="section-wrapper">
-    <div class="section" id="education-section-wrapper">
-        <img class="unselectable section-image-full" id="education-first-image" src="img/lilis-front.gif">
-        <!-- --> <div class="section-divider-full"></div> <!-- -->
-        <!--     <div class="section-divider-short"></div> <!-- -->
-
-        <div class="section-title-text">
-            <span>University of Oregon</span>
-            <a class="uncolored-link" id="university-of-oregon-link" href="https://uoregon.edu/" target="_blank">Website</a>
-        </div>
-        <div class="section-divider-full"></div>
-        
-        <p>I began attending the University of Oregon during Fall of 2012.</p>
-        <p>I knew I had a passion for programming going into college, but I love to learn and had to see what else my new school had to offer. I tried everything that sounded interesting ... and it was awesome!</p>    
-
-        <!-- COURSE QUOTES -->
-
-        <div class="column-title-text no-top-margin" id="course-details">
-            <span class="uppercase">Some of the courses I took:</span>
-            <div class="class-button-wrapper">
-                <a class="class-button-selected" id="class-button-1" onmouseup="switchQuoteFor(this, 1)">Vikings/Iceland Sagas</a> <!-- Onload course selected -->
-                <a class="class-button" id="class-button-2" onmouseup="switchQuoteFor(this, 2)">History of Motion Picture</a>
-                <a class="class-button" id="class-button-3" onmouseup="switchQuoteFor(this, 3)">Human Nature</a>
-                <a class="class-button" id="class-button-4" onmouseup="switchQuoteFor(this, 4)">Intro to Business</a>
-                <a class="class-button" id="class-button-5" onmouseup="switchQuoteFor(this, 5)">Calculus I / II / III</a>
-                <a class="class-button" id="class-button-6" onmouseup="switchQuoteFor(this, 6)">Linear Algebra</a>
-            </div>
-            <div id="class-quote">
-                <!-- NOTE: Quote as String also in Javascript, they must both be changed -->
-                <span id="quote-raw">Icelandic Sagas are also known as 'Family Sagas'. They live up to this nickname with pages of family tree details for every character in every saga ... so many Olafs.</span>
-            </div>
-        </div>
-
-        <!-- END QUOTES -->
-
-        <p>I found some subjects that just weren't for me, but I also found some that I wanted to learn more about.</p>
-        <p>I am pursuing minors in <a class="minor-button uncolored-link" id="mathmatics-minor-button" href="http://math.uoregon.edu/" target="_blank">Mathmatics</a> and <a class="minor-button uncolored-link" id="economics-minor-button" href="http://economics.uoregon.edu/" target="_blank">Economics</a>.</p>
-        <p>I plan to graduate J<span style="text-decoration:underline">une 2016</span> with a B.S. in <a class="minor-button uncolored-link" id="cs-major-button" href="http://www.cs.uoregon.edu/" target="_blank">Computer and Information Science</a>.</p>
-    </div>
-    <div class="window-bar" id="project-section-wrapper">
-        <div class="section-title-text title-text" id="projects-title-text">
-            <span>Latest Projects</span>
-        </div>
-        <div class="item-card-wrapper">
-            <div class="item-card-project" id="left-card">
-                <img class="unselectable project-tile-img" id="cognitopia-splash-image" src="img/Cognitopia-Project-Splash.png">
-            </div>
-            <div class="item-card-project" id="right-card">
-                <img class="unselectable project-tile-img" id="" src="img/cognitopia-splash.jpg">
-            </div>
-        </div>
-        <a class="uncolored-link" id="my-projects-link" href="#" target="_blank">All Projects</a>
-    </div>
-    <div class="window-bar" id="project-section-wrapper">
-        <div class="section" id="resume-section-wrapper">
-            <div class="section-title-text title-text" id="projects-title-text">
-                <span>Resume</span>
-            </div>
-            <div class="section-divider-short"></div>
-            <div id="resume-wrapper">
-                <iframe id="resume-iframe" src="OnlineResume.pdf#view=fit&toolbar=0&navpanes=0" frameborder=0></iframe>
-            </div>
-        </div>
-    </div>
-    <div style="height: 1000px;"></div>
-</div>
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+  </body>
 </html>
