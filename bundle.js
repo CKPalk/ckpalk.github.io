@@ -27251,7 +27251,7 @@
 
 
 	// module
-	exports.push([module.id, ".header {\n  z-index: 1000;\n  position: fixed;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  top: 0;\n  width: 100%;\n  text-align: center;\n  padding: 12px;\n  box-sizing: border-box;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n  font: 'Montserrat', sans-serif;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #555;\n  background-color: #add8e6;\n}\n.header a {\n  width: 20vw;\n  width: auto;\n  margin: 2vw 1.5vw 2vw 1.5vw;\n}\n", ""]);
+	exports.push([module.id, ".header {\n  z-index: 1000;\n  position: fixed;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  top: 0;\n  width: 100%;\n  text-align: center;\n  padding: 12px;\n  box-sizing: border-box;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n  font: 'Montserrat', sans-serif;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #555;\n  background-color: transparent;\n}\n.header a {\n  width: 20vw;\n  width: auto;\n  margin: 2vw 1.5vw 2vw 1.5vw;\n}\n", ""]);
 
 	// exports
 
