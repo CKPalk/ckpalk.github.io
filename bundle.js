@@ -26549,19 +26549,14 @@
 
 	var _actions = __webpack_require__(203);
 
+	var actions = _interopRequireWildcard(_actions);
+
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	var Website = exports.Website = (0, _reactRedux.connect)(function mapStateToProps(state) {
-	  return { todos: state };
+	  return state;
 	}, function mapDispatchToProps(dispatch) {
-	  return {
-	    addTodo: function addTodo(text) {
-	      return dispatch((0, _actions.addTodo)(text));
-	    },
-	    toggleTodo: function toggleTodo(id) {
-	      return dispatch((0, _actions.toggleTodo)(id));
-	    }
-	  };
+	  return {};
 	})(components.Website);
 
 /***/ },
@@ -26622,6 +26617,7 @@
 	        page: {
 	          name: 'page',
 	          components: {
+	            billboard_container: { name: 'page__billboard_container' },
 	            body_container: { name: 'page__body_container' }
 	          }
 	        }
@@ -26631,7 +26627,11 @@
 	        'div',
 	        { className: css.page.name },
 	        _react2.default.createElement(_header.Header, null),
-	        _react2.default.createElement(_billboard.Billboard, null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: css.page.components.billboard_container.name },
+	          _react2.default.createElement(_billboard.Billboard, null)
+	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: css.page.components.body_container.name },
@@ -26685,7 +26685,7 @@
 
 
 	// module
-	exports.push([module.id, "html,\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.2px;\n  word-wrap: break-word;\n}\n.page__body_container {\n  z-index: 2;\n  border-top: solid 1px rgba(0,0,0,0.1);\n  padding-top: 8vw;\n  padding-left: 10vw;\n  padding-right: 10vw;\n  display: block;\n  background-color: #fff;\n  height: 1000px;\n  position: relative;\n}\n", ""]);
+	exports.push([module.id, "html {\n  height: 5000px;\n}\nhtml,\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.2px;\n  word-wrap: break-word;\n}\n.page__billboard_container {\n  z-index: 2;\n  height: 100vh;\n  max-height: 140vmin;\n  overflow: hidden;\n  width: 100vw;\n  position: relative;\n}\n.page__body_container {\n  z-index: 1;\n  border-top: solid 1px rgba(0,0,0,0.1);\n  padding-top: 8vw;\n  padding-left: 10vw;\n  padding-right: 10vw;\n  display: block;\n  background-color: #fff;\n  height: 1000px;\n  position: relative;\n}\n", ""]);
 
 	// exports
 
@@ -27017,6 +27017,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _header = __webpack_require__(200);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27043,6 +27045,7 @@
 	          name: 'billboard',
 	          elements: {
 	            cover: { name: 'billboard__cover' },
+	            filler: { name: 'billboard__filler' },
 	            name_container: { name: 'billboard__name_container' },
 	            introduction: { name: 'billboard__introduction' },
 	            fullName: { name: 'billboard__fullName' },
@@ -27058,6 +27061,11 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: css.billboard.elements.cover.name },
+	          _react2.default.createElement(
+	            'div',
+	            { className: css.billboard.elements.filler.name },
+	            _react2.default.createElement(_header.Header, { onBillboard: true })
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: css.billboard.elements.name_container.name },
@@ -27077,7 +27085,8 @@
 	              { className: css.billboard.elements.tagline.name },
 	              'Programmer / Student'
 	            )
-	          )
+	          ),
+	          _react2.default.createElement('div', { className: css.billboard.elements.filler.name })
 	        )
 	      );
 	    }
@@ -27121,7 +27130,7 @@
 
 
 	// module
-	exports.push([module.id, ".billboard {\n  z-index: 1;\n  margin: 0;\n  width: 100vw;\n  height: 100vh;\n  max-height: 140vmin;\n  background-color: #f4f4f4;\n}\n.billboard__cover {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  top: 0;\n}\n.billboard__name_container {\n  position: fixed;\n  display: flex;\n  flex-direction: column;\n  top: 0;\n  height: 100%;\n  max-height: 140vmin;\n  width: 100vw;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  font-family: 'Montserrat', sans-serif;\n  text-transform: uppercase;\n}\n.billboard__fullName {\n  font-weight: normal;\n  font-size: 80px /* \"Cameron\".length = 7 * 80px = 560px */;\n  color: #222;\n  box-sizing: border-box;\n  position: relative;\n}\n.billboard__divider {\n  margin: 10px auto 30px auto;\n  max-width: 300px;\n  width: 54.5vw;\n  height: 1px;\n  background-color: #555;\n}\n.billboard__introduction,\n.billboard__tagline {\n  font-size: 20px;\n}\n.billboard__introduction {\n  color: #777;\n}\n.billboard__tagline {\n  color: #555;\n}\n@media (max-width: 530px) {\n  .billboard__fullName {\n    font-size: 16.5vw;\n  }\n  .billboard__divider {\n    margin-top: 1.8vw;\n    margin-bottom: 5.4vw;\n  }\n  .billboard__introduction,\n  .billboard__tagline {\n    font-size: 5vw;\n  }\n}\n", ""]);
+	exports.push([module.id, "html {\n  height: 5000px;\n}\n.billboard {\n  margin: 0;\n  width: 100vw;\n  height: 100vh;\n  max-height: 140vmin;\n  background-color: #f4f4f4;\n  position: absolute;\n  clip: rect(0, auto, auto, 0);\n}\n.billboard__cover {\n  position: fixed;\n  height: 100vh;\n  max-height: 140vmin;\n  width: 100%;\n  top: 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.billboard__filler {\n  display: block;\n  flex: 10;\n  width: 100%;\n}\n.billboard__name_container {\n  position: relative;\n  flex: 10;\n  width: 100%;\n  text-align: center;\n  font-family: 'Montserrat', sans-serif;\n  text-transform: uppercase;\n}\n.billboard__fullName {\n  font-weight: normal;\n  font-size: 80px /* \"Cameron\".length = 7 * 80px = 560px */;\n  color: #222;\n  box-sizing: border-box;\n  position: relative;\n}\n.billboard__divider {\n  margin: 10px auto 30px auto;\n  max-width: 300px;\n  width: 54.5vw;\n  height: 1px;\n  background-color: #555;\n}\n.billboard__introduction,\n.billboard__tagline {\n  font-size: 20px;\n}\n.billboard__introduction {\n  color: #777;\n}\n.billboard__tagline {\n  color: #555;\n}\n@media (min-width: 1200px) {\n  .billboard__divider {\n    margin: 0.83vh auto 2.5vh auto;\n    width: 25vw;\n  }\n  .billboard__fullName {\n    font-size: 6.7vw;\n  }\n  .billboard__introduction,\n  .billboard__tagline {\n    font-size: 1.67vw;\n  }\n}\n@media (max-width: 530px) {\n  .billboard__fullName {\n    font-size: 16.5vw;\n  }\n  .billboard__divider {\n    margin-top: 1.8vw;\n    margin-bottom: 5.4vw;\n  }\n  .billboard__introduction,\n  .billboard__tagline {\n    font-size: 5vw;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -27165,49 +27174,53 @@
 	  _createClass(Header, [{
 	    key: 'render',
 	    value: function render() {
+	      var onBillboard = this.props.onBillboard;
 
-	      var css = {
-	        header: {
-	          name: 'header',
-	          elements: {
-	            divider: { name: 'header__divider' }
-	          }
-	        }
-	      };
 
 	      var Divider = function Divider() {
 	        return _react2.default.createElement(
 	          'span',
-	          { className: css.header.elements.divider.name },
+	          { className: 'header__divider' },
 	          '|'
 	        );
 	      };
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: css.header.name },
+	        { className: 'header header--' + (onBillboard ? 'above' : 'below') },
 	        _react2.default.createElement(
-	          'a',
-	          null,
-	          'Link One'
-	        ),
-	        _react2.default.createElement(Divider, null),
-	        _react2.default.createElement(
-	          'a',
-	          null,
-	          'Link Two'
-	        ),
-	        _react2.default.createElement(Divider, null),
-	        _react2.default.createElement(
-	          'a',
-	          null,
-	          'Link Three'
-	        ),
-	        _react2.default.createElement(Divider, null),
-	        _react2.default.createElement(
-	          'a',
-	          null,
-	          'Link Four'
+	          'div',
+	          { className: 'header-fixed' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'header-fixed__side header-fixed__left' },
+	            _react2.default.createElement(
+	              'a',
+	              null,
+	              'Link One'
+	            ),
+	            _react2.default.createElement(Divider, null),
+	            _react2.default.createElement(
+	              'a',
+	              null,
+	              'Link Two'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'header-fixed__side header-fixed__right' },
+	            _react2.default.createElement(
+	              'a',
+	              null,
+	              'Link Three'
+	            ),
+	            _react2.default.createElement(Divider, null),
+	            _react2.default.createElement(
+	              'a',
+	              null,
+	              'Link Four'
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -27251,7 +27264,7 @@
 
 
 	// module
-	exports.push([module.id, ".header {\n  z-index: 1000;\n  position: fixed;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  top: 0;\n  width: 100%;\n  text-align: center;\n  padding: 12px;\n  box-sizing: border-box;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n  font: 'Montserrat', sans-serif;\n  text-transform: uppercase;\n  font-size: 16px;\n  color: #555;\n  background-color: transparent;\n}\n.header a {\n  width: 20vw;\n  width: auto;\n  margin: 2vw 1.5vw 2vw 1.5vw;\n}\n", ""]);
+	exports.push([module.id, "html {\n  height: 5000px;\n}\n.header {\n  z-index: 2;\n  width: 100%;\n  position: fixed;\n  top: 0;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  box-sizing: border-box;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  padding: 12px;\n  overflow: hidden;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n.header--above {\n  font: 'Montserrat', sans-serif;\n  color: #555;\n  background-color: transparent;\n}\n.header--below {\n  font: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  color: #fff;\n  background-color: #225378;\n}\n.header-fixed {\n  width: 80vw;\n  height: 100%;\n}\n.header-fixed__side {\n  width: 50%;\n  display: flex;\n  flex-direction: row;\n}\n.header-fixed__left {\n  float: left;\n  justify-content: flex-start;\n  background-color: #ffc0cb;\n}\n.header-fixed__right {\n  float: right;\n  justify-content: flex-end;\n  background-color: #ff0;\n}\n", ""]);
 
 	// exports
 
@@ -27260,33 +27273,24 @@
 /* 203 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	var uid = function uid() {
 	  return Math.random().toString(34).slice(2);
 	};
 
-	var actions = {
-	  x: {
-	    Y: 'Y',
-	    Z: 'Z'
-	  }
-	};
-
+	// const actions = {
+	//   x: {
+	//     Y: 'Y',
+	//     Z: 'Z'
+	//   }
+	// };
+	//
 	// export function actionCreator(data) {
 	//   return {
-	//     type: actions.todos.ADD,
-	//     payload: {
-	//       data: data
-	//     }
-	//   };
-	// }
-
-	// export function actionCreator(x) {
-	//   return {
-	//     type: actions.x.y,
-	//     payload: x
-	//   };
+	//     type: actions.x.Y,
+	//     payload: PAYLOAD
+	//   }
 	// }
 
 /***/ },
@@ -27324,7 +27328,7 @@
 
 
 	// module
-	exports.push([module.id, "/* FONT COLORS */\n/* FONTS */\n/* PAGE COLORS */\n", ""]);
+	exports.push([module.id, "html {\n  height: 5000px;\n}\n/* FONT COLORS */\n/* FONTS */\n/* PAGE COLORS */\n/* MEASUREMENTS */\n", ""]);
 
 	// exports
 
