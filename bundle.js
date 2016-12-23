@@ -26685,7 +26685,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  height: 5000px;\n}\nhtml,\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.2px;\n  word-wrap: break-word;\n}\n.page__billboard_container {\n  z-index: 2;\n  height: 100vh;\n  max-height: 140vmin;\n  overflow: hidden;\n  width: 100vw;\n  position: relative;\n}\n.page__body_container {\n  z-index: 1;\n  border-top: solid 1px rgba(0,0,0,0.1);\n  padding-top: 8vw;\n  padding-left: 10vw;\n  padding-right: 10vw;\n  display: block;\n  background-color: #fff;\n  height: 1000px;\n  position: relative;\n}\n", ""]);
+	exports.push([module.id, "html {\n  height: 5000px;\n}\nhtml,\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  letter-spacing: 0.2px;\n  word-wrap: break-word;\n}\n.page__billboard_container {\n  z-index: 2;\n  height: 100vh;\n  max-height: 140vmin;\n  overflow: hidden;\n  width: 100vw;\n  position: relative;\n}\n.page__body_container {\n  z-index: 1;\n  border-top: solid 1px $color-very-clear;\n  padding-top: 8vw;\n  padding-left: 10vw;\n  padding-right: 10vw;\n  display: block;\n  background-color: #fff;\n  height: 1000px;\n  position: relative;\n}\n", ""]);
 
 	// exports
 
@@ -27180,7 +27180,7 @@
 	      var Divider = function Divider() {
 	        return _react2.default.createElement(
 	          'span',
-	          { className: 'header__divider' },
+	          { className: 'header-fixed__divider' },
 	          '|'
 	        );
 	      };
@@ -27193,13 +27193,12 @@
 	          { className: 'header-fixed' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'header-fixed__side header-fixed__left' },
+	            { className: 'header-fixed__left' },
 	            _react2.default.createElement(
 	              'a',
 	              null,
 	              'Link One'
 	            ),
-	            _react2.default.createElement(Divider, null),
 	            _react2.default.createElement(
 	              'a',
 	              null,
@@ -27208,13 +27207,12 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'header-fixed__side header-fixed__right' },
+	            { className: 'header-fixed__right' },
 	            _react2.default.createElement(
 	              'a',
 	              null,
 	              'Link Three'
 	            ),
-	            _react2.default.createElement(Divider, null),
 	            _react2.default.createElement(
 	              'a',
 	              null,
@@ -27264,7 +27262,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  height: 5000px;\n}\n.header {\n  z-index: 2;\n  width: 100%;\n  position: fixed;\n  top: 0;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  box-sizing: border-box;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  padding: 12px;\n  overflow: hidden;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n.header--above {\n  font: 'Montserrat', sans-serif;\n  color: #555;\n  background-color: transparent;\n}\n.header--below {\n  font: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  color: #fff;\n  background-color: #225378;\n}\n.header-fixed {\n  width: 80vw;\n  height: 100%;\n}\n.header-fixed__side {\n  width: 50%;\n  display: flex;\n  flex-direction: row;\n}\n.header-fixed__left {\n  float: left;\n  justify-content: flex-start;\n  background-color: #ffc0cb;\n}\n.header-fixed__right {\n  float: right;\n  justify-content: flex-end;\n  background-color: #ff0;\n}\n", ""]);
+	exports.push([module.id, "html {\n  height: 5000px;\n}\n.header {\n  z-index: 2;\n  width: 100%;\n  position: fixed;\n  top: 0;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  box-sizing: border-box;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n  text-align: center;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n.header--above {\n  font: 'Montserrat', sans-serif;\n  color: #555;\n  background-color: transparent;\n}\n.header--below {\n  font: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  color: #fff;\n  background-color: #225378;\n}\n.header-fixed {\n  width: 90vw;\n  max-width: 1400px;\n  height: 100%;\n}\n.header-fixed__left,\n.header-fixed__right {\n  width: 50%;\n  display: flex;\n  flex-direction: row;\n}\n.header-fixed__left a,\n.header-fixed__right a {\n  padding: 2.5vh 3vw 2.5vh 3vw;\n}\n.header-fixed__divider {\n  padding: 10px;\n}\n.header-fixed__left {\n  float: left;\n  justify-content: flex-start;\n}\n.header-fixed__right {\n  float: right;\n  justify-content: flex-end;\n}\n", ""]);
 
 	// exports
 
